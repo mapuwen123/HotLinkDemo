@@ -39,7 +39,7 @@ Bugly官网提供两种SDK分别是
 
 ##### 配置build.gradle
 
-在位于项目的根目录 `build.gradle` 文件中添加Walle Gradle插件的依赖， 如下：
+在位于项目的根目录 `build.gradle` 文件中添加Gradle插件的依赖, 如下:
 
 ```groovy
 buildscript {
@@ -56,4 +56,31 @@ buildscript {
 
 `tinker-support.gradle` 文件详细内容见项目;
 
-------------------------------------------
+在位于App的根目录 `build.gradle` 文件中添加, 如下:
+
+```groovy
+// 依赖插件脚本
+apply from: 'tinker-support.gradle'
+
+android {
+    defaultConfig {
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    // 多dex配置
+    compile "com.android.support:multidex:1.0.1" 
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+    compile 'com.tencent.bugly:nativecrashreport:latest.release' 
+    compile 'com.tencent.bugly:crashreport_upgrade:1.3.1'
+}
+```
