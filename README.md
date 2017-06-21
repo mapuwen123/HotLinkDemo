@@ -50,7 +50,7 @@ buildscript {
 }
 ```
 
-并在当前App更目录新建 `tinker-support.gradle` 文件: <br />
+并在当前App更目录新建 `tinker-support.gradle` 文件:
 
-aaaaaaaaaaaaaaaaaaa
+[image-01.png]: /images/01.png "image-01.png"
 
