@@ -84,3 +84,39 @@ dependencies {
     compile 'com.tencent.bugly:crashreport_upgrade:1.3.1'
 }
 ```
+
+##### 参数配置
+
+在AndroidMainfest.xml中进行以下配置：
+
+* 权限配置
+```groovy
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.READ_LOGS" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+```
+
+* Activity配置
+```groovy
+<activity
+    android:name="com.tencent.bugly.beta.ui.BetaActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize|locale"
+    android:theme="@android:style/Theme.Translucent" />
+```
+
+* 配置FileProvider
+```groovy
+<provider
+    android:name="android.support.v4.content.FileProvider"
+    android:authorities="${applicationId}.fileProvider"
+    android:exported="false"
+    android:grantUriPermissions="true">
+    <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/provider_paths"/>
+</provider>
+```
+###### 注意：如果您想兼容Android N或者以上的设备，必须要在AndroidManifest.xml文件中配置FileProvider来访问共享路径的文件。
