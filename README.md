@@ -1,25 +1,27 @@
-HotLinkDemo
-================================
+#HotLinkDemo
+
 本示例项目针对[Bugly](https://bugly.qq.com/v2/index)和[Wally](https://github.com/Meituan-Dianping/walle)的应用
 
-Bugly简介
---------------------------------
+##Bugly简介
+
 腾讯Bugly，为移动开发者提供专业的异常上报和运营统计，帮助开发者快速发现并解决异常，同时掌握产品运营动态，及时跟进用户反馈。
 
-Wally简介
---------------------------------
+##Wally简介
+
 Walle（瓦力）：Android Signature V2 Scheme签名下的新一代渠道包打包神器
 
 瓦力通过在Apk中的APK Signature Block区块添加自定义的渠道信息来生成渠道包，从而提高了渠道包生成效率，可以作为单机工具来使用，也可以部署在HTTP服务器上来实时处理渠道包Apk的升级网络请求。
 
-Bugly使用
---------------------------------
+###Bugly使用
+
 Bugly官网提供两种SDK分别是
 
-### 异常上报SDK
+#### 异常上报SDK
+
 异常上报包含:异常上报, 统计(渠道, 用户, 安装数, 打开数...)等功能;
 
-### 应用升级SDK
+#### 应用升级SDK
+
 应用升级包含:应用升级, 热更新以及异常上报SDK所有功能;<br />
 所以如果引用应用升级SDK就无需在重复引用异常上报SDK;
 
@@ -34,6 +36,7 @@ Bugly官网提供两种SDK分别是
 通过配置gradle的方式导入到项目;
 
 ##### 配置build.gradle
+
 在位于项目的根目录 `build.gradle` 文件中添加Walle Gradle插件的依赖， 如下：
 
 ```groovy
@@ -45,6 +48,7 @@ buildscript {
 }
 ```
 
-并在当前App更目录新建 `tinker-support.gradle` 文件:
+并在当前App更目录新建 `tinker-support.gradle` 文件: <br />
 
+aaaaaaaaaaaaaaaaaaa
 
