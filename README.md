@@ -120,3 +120,12 @@ dependencies {
         android:resource="@xml/provider_paths"/>
 </provider>
 ```
+
+##### 混淆配置
+
+为了避免混淆SDK，在Proguard混淆文件中增加以下配置：
+```groovy
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}
+-keep class android.support.**{*;}
+```
