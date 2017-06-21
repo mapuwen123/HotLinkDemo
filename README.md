@@ -108,6 +108,7 @@ dependencies {
 ```
 
 * 配置FileProvider
+###### 注意：如果您想兼容Android N或者以上的设备，必须要在AndroidManifest.xml文件中配置FileProvider来访问共享路径的文件。
 ```groovy
 <provider
     android:name="android.support.v4.content.FileProvider"
@@ -119,4 +120,3 @@ dependencies {
         android:resource="@xml/provider_paths"/>
 </provider>
 ```
-###### 注意：如果您想兼容Android N或者以上的设备，必须要在AndroidManifest.xml文件中配置FileProvider来访问共享路径的文件。
