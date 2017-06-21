@@ -129,3 +129,17 @@ dependencies {
 -keep public class com.tencent.bugly.**{*;}
 -keep class android.support.**{*;}
 ```
+
+##### SDK初始化
+
+需要在Application中进行初始化操作:
+```groovy
+Bugly.init(getApplicationContext(), "注册时申请的APPID", false);
+```
+该初始化方法为统一初始化操作,异常上报无需重复初始化;<br/>
+参数解析：
+* 参数1：上下文对象
+
+* 参数2：注册时申请的APPID
+
+* 参数3：是否开启debug模式，true表示打开debug模式，false表示关闭调试模式
