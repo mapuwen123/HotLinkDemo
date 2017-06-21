@@ -52,5 +52,8 @@ buildscript {
 
 并在当前App更目录新建 `tinker-support.gradle` 文件:
 
-[image-01.png]: /images/01.png "image-01.png"
+![github-01.png](/images/01.png "github-01.png")
 
+`tinker-support.gradle` 文件详细内容见项目;
+
+------------------------------------------
