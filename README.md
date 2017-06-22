@@ -254,7 +254,7 @@ gradlew clean assembleReleaseChannels <br/>
 
 ![github-10.png](/images/10.png "github-10.png")
 
-### 如何获取渠道信息？
+## 如何获取渠道信息？
 
 如果你已经集成了Bugly的异常上报，你就可以通过以下方式来塞入渠道信息：
 
@@ -266,6 +266,6 @@ Bugly.setAppChannel(getApplication(), channel);
 Bugly.init(getApplication(), "YOUR_APP_ID", true);
 ```
 
-### 一个补丁修复所有渠道
+## 一个补丁修复所有渠道
 
 生成热更新补丁按照上文步骤即可,无需分渠道生成补丁;
