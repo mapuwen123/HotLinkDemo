@@ -143,3 +143,15 @@ Bugly.init(getApplicationContext(), "注册时申请的APPID", false);
 * 参数2：注册时申请的APPID
 
 * 参数3：是否开启debug模式，true表示打开debug模式，false表示关闭调试模式
+
+##### 应用更新
+
+SDK初始化完成便开启更新检测,只需在Bugly平台上传更新包即可;
+
+##### 热更新
+
+热更新需要生成基线包和补丁包:
+
+* 基线包
+
+* 补丁包
