@@ -207,5 +207,5 @@ SDK初始化完成便开启更新检测,只需在Bugly平台上传更新包即�
 注意:baseApkDir应与要修复的基线包路径对应;
 
 编译:<br/>
-![github-04.png](/images/02.png "github-04.png")
-![github-05.png](/images/03.png "github-05.png")
+![github-04.png](/images/04.png "github-04.png")
+![github-05.png](/images/05.png "github-05.png")
