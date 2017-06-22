@@ -176,5 +176,7 @@ SDK初始化完成便开启更新检测,只需在Bugly平台上传更新包即�
 ```
 
 编译:
+![github-02.png](/images/02.png "github-02.png")
+![github-03.png](/images/03.png "github-03.png")
 
 * 补丁包
