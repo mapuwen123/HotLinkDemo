@@ -247,5 +247,11 @@ channel用于配置渠道信息;
 
 命令行打多渠道包：
 
-gradlew clean assembleReleaseChannels
+gradlew clean assembleReleaseChannels <br/>
+![github-09.png](/images/09.png "github-09.png")
+
+生成渠道包:
+
+![github-10.png](/images/10.png "github-10.png")
+
 
