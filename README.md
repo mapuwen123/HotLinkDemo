@@ -244,3 +244,8 @@ dependencies {
 ![github-07.png](/images/07.png "github-07.png")
 ![github-08.png](/images/08.png "github-08.png") <br/>
 channel用于配置渠道信息;
+
+命令行打多渠道包：
+
+gradlew clean assembleReleaseChannels
+
