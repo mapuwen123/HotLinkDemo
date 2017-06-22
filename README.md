@@ -179,4 +179,33 @@ SDK初始化完成便开启更新检测,只需在Bugly平台上传更新包即�
 ![github-02.png](/images/02.png "github-02.png")
 ![github-03.png](/images/03.png "github-03.png")
 
+安装编译好的基线包并运行后SDK会自动上传当前基线版本;
+
 * 补丁包
+
+与基线包一样,补丁包也应对`tinker-support.gradle` 文件进行配置:
+``` groovy
+    /**
+     * 此处填写每次构建生成的基准包目录
+     */
+    def baseApkDir = "app-0621-13-13-25"
+    
+    tinkerId = "1.0.2-patch"
+    
+    // 编译补丁包时，必需指定基线版本的apk，默认值为空
+    // 如果为空，则表示不是进行补丁包的编译
+    //     @{link tinkerPatch.oldApk }
+    baseApk = "${bakPath}/${baseApkDir}/app-release.apk"
+
+    // 对应tinker插件applyMapping
+    baseApkProguardMapping = "${bakPath}/${baseApkDir}/app-release-mapping.txt"
+
+    // 对应tinker插件applyResourceMapping
+    baseApkResourceMapping = "${bakPath}/${baseApkDir}/app-release-R.txt"
+```
+
+注意:baseApkDir应与要修复的基线包路径对应;
+
+编译:<br/>
+![github-04.png](/images/02.png "github-04.png")
+![github-05.png](/images/03.png "github-05.png")
