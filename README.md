@@ -50,7 +50,7 @@ buildscript {
 }
 ```
 
-并在当前App更目录新建 `tinker-support.gradle` 文件:
+并在当前App根目录新建 `tinker-support.gradle` 文件:
 
 ![github-01.png](/images/01.png "github-01.png")
 
@@ -209,3 +209,21 @@ SDK初始化完成便开启更新检测,只需在Bugly平台上传更新包即�
 编译:<br/>
 ![github-04.png](/images/04.png "github-04.png")
 ![github-05.png](/images/05.png "github-05.png")
+
+### Walle使用
+
+##### 配置build.gradle
+
+在位于项目的根目录 `build.gradle` 文件中添加Gradle插件的依赖, 如下:
+
+```groovy
+buildscript {
+    dependencies {
+        classpath 'com.meituan.android.walle:plugin:1.1.3'
+    }
+}
+```
+
+并在当前App根目录新建 `multiple-channel.gradle` 文件:
+
+![github-06.png](/images/06.png "github-06.png")
