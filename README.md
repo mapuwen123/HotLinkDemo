@@ -159,6 +159,8 @@ SDK初始化完成便开启更新检测,只需在Bugly平台上传更新包即�
     tinkerId = "1.0.2-base"
 ```
 
+注意:必须确保tinkerId的唯一性;
+
 基线包无需配置如下参数可以注释:
 ```groovy
     // 编译补丁包时，必需指定基线版本的apk，默认值为空
@@ -172,5 +174,9 @@ SDK初始化完成便开启更新检测,只需在Bugly平台上传更新包即�
     // 对应tinker插件applyResourceMapping
     baseApkResourceMapping = "${bakPath}/${baseApkDir}/app-release-R.txt"
 ```
+
+编译:<br/>
+![github-02.png](/images/02.png "github-02.png")
+![github-03.png](/images/03.png "github-03.png")
 
 * 补丁包
