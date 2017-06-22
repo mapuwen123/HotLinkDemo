@@ -227,3 +227,25 @@ buildscript {
 并在当前App根目录新建 `multiple-channel.gradle` 文件:
 
 ![github-06.png](/images/06.png "github-06.png")
+`multiple-channel.gradle` 文件详细内容见项目;
+
+在位于App的根目录 build.gradle 文件中添加, 如下:
+
+```groovy
+// 多渠道使用walle示例（注：多渠道使用）
+apply from: 'multiple-channel.gradle'
+dependencies {
+    compile 'com.meituan.android.walle:library:1.1.3'
+}
+```
+
+创建channel配置:
+
+![github-07.png](/images/07.png "github-07.png")
+![github-08.png](/images/08.png "github-08.png") <br/>
+channel用于配置渠道信息;
+
+命令行打多渠道包：
+
+gradlew clean assembleReleaseChannels
+
