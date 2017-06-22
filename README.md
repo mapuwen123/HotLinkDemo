@@ -154,4 +154,23 @@ SDK初始化完成便开启更新检测,只需在Bugly平台上传更新包即�
 
 * 基线包
 
+首先应在 `tinker-support.gradle` 文件中配置:
+```groovy
+    tinkerId = "1.0.2-base"
+```
+
+基线包无需配置如下参数可以注释:
+```groovy
+    // 编译补丁包时，必需指定基线版本的apk，默认值为空
+    // 如果为空，则表示不是进行补丁包的编译
+    //     @{link tinkerPatch.oldApk }
+    baseApk = "${bakPath}/${baseApkDir}/app-release.apk"
+
+    // 对应tinker插件applyMapping
+    baseApkProguardMapping = "${bakPath}/${baseApkDir}/app-release-mapping.txt"
+
+    // 对应tinker插件applyResourceMapping
+    baseApkResourceMapping = "${bakPath}/${baseApkDir}/app-release-R.txt"
+```
+
 * 补丁包
