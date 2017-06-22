@@ -175,7 +175,7 @@ SDK初始化完成便开启更新检测,只需在Bugly平台上传更新包即�
     baseApkResourceMapping = "${bakPath}/${baseApkDir}/app-release-R.txt"
 ```
 
-编译:
+编译:<br/>
 ![github-02.png](/images/02.png "github-02.png")
 ![github-03.png](/images/03.png "github-03.png")
 
